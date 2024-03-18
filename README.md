@@ -1,4 +1,4 @@
-## Technical Test PT. Transido Data Perkasa
+## Technical Test PT. Transindo Data Perkasa
 Menggunakan Laravel 11, Database MySQL, Bootstrap 5 dan Library DOMPdf
 
 

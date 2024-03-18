@@ -1,3 +1,20 @@
+## Technical Test PT. Transido Data Perkasa
+Menggunakan Laravel 11, Database MySQL, Bootstrap 5 dan Library DOMPdf
+
+
+### Cara run project  : 
+- Pertama, Clone project meggunakan syntax
+`git clone https://github.com/fajarpp08/rental-mobil.git`
+- lakukan `composer update` pada direktori project yang sudah di clone tersebut
+- Lakukan Import database terlebih dahulu 
+- nama db = test-tdp-sewa-mobil.sql import ke phpmyadmin / database lainnya.
+- Atur .env untuk koneksikan database nya(ganti baris kode nya dengan kode tersebut jika menggunakan database mysql, jika yang lain dapat disesuaikan)
+- Atau mungkin bisa melakukan migrasi ulang (opsional), dengan cara ketikkan :<br>
+`php artisan migrate` <br>
+`php artisan db:seed UserSeeder`
+- kemudian, setelah selesai ketikkan `php artisan serve` untuk menjalankan project
+- Project running.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">

@@ -1,5 +1,7 @@
 ## Technical Test PT. Transindo Data Perkasa
 Menggunakan Laravel 11, Database MySQL, Bootstrap 5 dan Library DOMPdf
+#### Nama : Fajar Putra Pratama
+#### Email : fajarpp801@gmail.com
 
 
 ### Cara run project  : 

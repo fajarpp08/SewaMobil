@@ -8,6 +8,7 @@ Menggunakan Laravel 11, Database MySQL, Bootstrap 5 dan Library DOMPdf
 - lakukan `composer update` pada direktori project yang sudah di clone tersebut
 - Lakukan Import database terlebih dahulu 
 - nama db = test-tdp-sewa-mobil.sql import ke phpmyadmin / database lainnya.
+- Database .sql bisa download disini [Database](https://github.com/fajarpp08/SewaMobil/blob/master/Panduan%20Project/test-tdp-sewa-mobil.sql)
 - Atur .env untuk koneksikan database nya(ganti baris kode nya dengan kode tersebut jika menggunakan database mysql, jika yang lain dapat disesuaikan)
 - Atau mungkin bisa melakukan migrasi ulang (opsional), dengan cara ketikkan :<br>
 `php artisan migrate` <br>

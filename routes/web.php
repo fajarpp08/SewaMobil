@@ -9,6 +9,7 @@ use App\Http\Controllers\MobilController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PengembalianController;
 
+
 Route::middleware(['guest'])->group(function () {
     Route::get('/login', [AuthController::class, 'index'])->name('login');
     Route::post('/login', [AuthController::class, 'login']);
@@ -33,7 +34,7 @@ Route::middleware(['auth'])->group(function () {
         Route::resource('mobil', MobilController::class);
         Route::resource('sewa', SewaController::class);
         Route::resource('pengembalian', PengembalianController::class);
-        // // laporan peminjaman
+        // // laporan sewa
         Route::get('/laporansewa', [SewaController::class, 'laporan'])->name('laporansewa');
         Route::post('/cetak_laporansewa', [SewaController::class, 'cetakLaporan'])->name('cetak_laporansewa');
         // // laporan pengembalian

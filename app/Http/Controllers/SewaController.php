@@ -7,6 +7,7 @@ use App\Models\Sewa;
 use App\Models\User;
 use App\Models\Mobil;
 use App\Models\Pengembalian;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -79,20 +80,20 @@ class SewaController extends Controller
 
         return view('admin.sewa.laporan', compact('sewas'));
     }
-    // public function cetakLaporan(Request $request)
-    // {
-    //     $tanggalMulai = Carbon::parse($request->input('tgl_mulai'));
-    //     $tanggalAkhir = Carbon::parse($request->input('tgl_akhir'))->endOfDay();
+    public function cetakLaporan(Request $request)
+    {
+        $tanggalMulai = Carbon::parse($request->input('tgl_mulai'));
+        $tanggalAkhir = Carbon::parse($request->input('tgl_akhir'))->endOfDay();
 
-    //     $sewas = Sewa::whereBetween('created_at', [$tanggalMulai, $tanggalAkhir])->get();
-    //     $pdf = PDF::loadview('admin.sewa.laporanpdf', ['sewas' => $sewas]);
-    //     return $pdf->download('Laporan_sewa.pdf');
-    // }
+        $sewas = Sewa::whereBetween('created_at', [$tanggalMulai, $tanggalAkhir])->get();
+        $pdf = PDF::loadview('admin.sewa.laporanpdf', ['sewas' => $sewas]);
+        return $pdf->download('Laporan_sewa.pdf');
+    }
 
 
 
     // USER 
-    public function formsewa($mobil_id)
+    public function formSewa($mobil_id)
     {
         $users = Auth::user();
         $mobils = Mobil::findOrFail($mobil_id);
@@ -114,7 +115,7 @@ class SewaController extends Controller
         ]);
     }
 
-    public function createsewa(Request $request)
+    public function createSewa(Request $request)
     {
         $request->validate([
             'tgl_mulai' => 'required|date',

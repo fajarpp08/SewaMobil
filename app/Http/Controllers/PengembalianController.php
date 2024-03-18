@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Carbon\Carbon;
+use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Pengembalian;
 use Illuminate\Http\Request;
 
@@ -59,13 +60,13 @@ class PengembalianController extends Controller
 
         return view('admin.pengembalian.laporan', compact('pengembalians'));
     }
-    // public function cetakLaporan(Request $request)
-    // {
-    //     $tanggalMulai = Carbon::parse($request->input('tgl_mulai'));
-    //     $tanggalAkhir = Carbon::parse($request->input('tgl_akhir'))->endOfDay();
+    public function cetakLaporan(Request $request)
+    {
+        $tanggalMulai = Carbon::parse($request->input('tgl_mulai'));
+        $tanggalAkhir = Carbon::parse($request->input('tgl_akhir'))->endOfDay();
 
-    //     $pengembalians = Pengembalian::whereBetween('created_at', [$tanggalMulai, $tanggalAkhir])->get();
-    //     $pdf = PDF::loadview('admin.pengembalian.laporanpdf', ['pengembalians' => $pengembalians]);
-    //     return $pdf->download('Laporan_Pengembalian.pdf');
-    // }
+        $pengembalians = Pengembalian::whereBetween('created_at', [$tanggalMulai, $tanggalAkhir])->get();
+        $pdf = PDF::loadview('admin.pengembalian.laporanpdf', ['pengembalians' => $pengembalians]);
+        return $pdf->download('Laporan_Pengembalian.pdf');
+    }
 }

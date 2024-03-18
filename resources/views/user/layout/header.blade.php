@@ -27,7 +27,7 @@
                                 <a href="/rentalan" class="header__nav-link">Peminjaman</a>
                             </li>
                             
-                            {{-- Peminjaman --}}
+                            {{-- Account --}}
                             <li class="header__nav-item">
                                 <a href="/account" class="header__nav-link">My Account</a>
                             </li>

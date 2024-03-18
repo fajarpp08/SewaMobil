@@ -14,42 +14,6 @@
                             enctype="multipart/form-data">
                             @method('PATCH')
                             @csrf
-                            {{-- <div class="mb-3">
-                                <label class="form-label" for="exampleFormControlSelect1">Nama</label>
-                                <select class="form-control" id="exampleFormControlSelect1" name="user_id">
-                                    @foreach ($users as $user)
-                                        @if (old('peminjaman_id', $pengembalians->peminjamans->peminjaman_id) == $user->id)
-                                            <option value="{{ $user->id }}" selected>{{ $user->nama }}</option>
-                                        @else
-                                            <option value="{{ $user->id }}">{{ $user->nama }}</option>
-                                        @endif
-                                    @endforeach
-                                </select>
-                            </div> --}}
-                            {{-- <div class="mb-3">
-                                <label class="form-label" for="exampleFormControlSelect1">Nomor SIM</label>
-                                <select class="form-control" id="exampleFormControlSelect1" name="user_id">
-                                    @foreach ($users as $user)
-                                        @if (old('user_id', $peminjamans->user_id) == $user->id)
-                                            <option value="{{ $user->id }}" selected>{{ $user->nosim }}</option>
-                                        @else
-                                            <option value="{{ $user->id }}">{{ $user->nosim }}</option>
-                                        @endif
-                                    @endforeach
-                                </select>
-                            </div> --}}
-                            {{-- <div class="mb-3">
-                                <label class="form-label" for="exampleFormControlSelect1">Mobil</label>
-                                <select class="form-control" id="exampleFormControlSelect1" name="mobil_id">
-                                    @foreach ($mobils as $mobil)
-                                        @if (old('mobil_id', $peminjamans->mobil_id) == $mobil->id)
-                                            <option value="{{ $mobil->id }}" selected>{{ $mobil->model }}</option>
-                                        @else
-                                            <option value="{{ $mobil->id }}">{{ $mobil->model }}</option>
-                                        @endif
-                                    @endforeach
-                                </select>
-                            </div> --}}
                             <div class="mb-3">
                                 <label class="form-label" for="exampleFormControlInput1">Tanggal Kembali</label>
                                 <input type="date" id="exampleFormControlInput1" placeholder="Masukkan tanggal kembali"

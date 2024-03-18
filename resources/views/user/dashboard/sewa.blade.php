@@ -102,7 +102,7 @@
                                                                             </button>
                                                                         </form>
                                                                     </td>
-                                                                    {{-- <form action="{{ route('kembalikan', ['peminjaman' => $peminjaman->id]) }}" method="post">
+                                                                    {{-- <form action="{{ route('kembalikan', ['sewa' => $sewa->id]) }}" method="post">
                                                                         @csrf
                                                                         <button type="submit" class="btn btn-danger py-2 mt-1" onclick="return confirm('Apakah Anda yakin untuk dikembalikan?')">Kembalikan</button>
                                                                     </form> --}}

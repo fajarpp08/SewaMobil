@@ -14,7 +14,9 @@ Fajar Putra Pratama
 
 Tools dan Library Yang Digunakan : PHP, Javascript, Laravel, MySQL, Bootstrap, Visual Studio Code.
 
-Database Menggunakan mysql :
+Database Menggunakan mysql : 
+Database bisa diambil dari dalam folder Panduan Project
+[Database](https://github.com/fajarpp08/SewaMobil/blob/master/Panduan%20Project/test-tdp-sewa-mobil.sql)
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
